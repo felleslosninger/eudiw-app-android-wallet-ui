@@ -229,6 +229,7 @@ PLATFORMS
   arm64-darwin-24
   universal-darwin-23
   x64-mingw-ucrt
+  x86_64-linux
 
 DEPENDENCIES
   fastlane
@@ -237,4 +238,4 @@ DEPENDENCIES
   fastlane-plugin-properties
 
 BUNDLED WITH
-   2.6.2
+   2.6.3
