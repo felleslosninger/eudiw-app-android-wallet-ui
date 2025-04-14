@@ -41,6 +41,7 @@ android {
 
     defaultConfig {
         applicationId = "eu.europa.ec.euidi"
+        versionName = "1.0.0"
         versionCode = 1
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
