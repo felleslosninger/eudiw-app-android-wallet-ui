@@ -94,7 +94,7 @@ platform :android do
   desc "Deploy a new version to Firebase app distribution"
     lane :deploy_dev do
       latest_release = firebase_app_distribution_get_latest_release(
-        app: "1:115416324171:android:fe8c6eceafd658059c95ce",
+        app: "1:673327080494:android:928aff209789a126666bbf",
         service_credentials_file: "firebase-distribution-service-account.json"
       )
       android_set_version_code(
