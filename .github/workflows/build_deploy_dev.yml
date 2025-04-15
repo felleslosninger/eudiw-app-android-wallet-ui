@@ -57,8 +57,7 @@ jobs:
           KEYSTORE_KEY_PASSWORD: ${{ secrets.KEYSTORE_KEY_PASSWORD }}
           KEYSTORE_STORE_PASSWORD: ${{ secrets.KEYSTORE_STORE_PASSWORD }}
         run: |
-          echo "$ANDROID_KEYSTORE_FILE_B64" | base64 -d > keystore.jks
-          echo "storeFile=keystore.jks" >> keystore.properties
+          echo "$ANDROID_KEYSTORE_FILE_B64" | base64 -d > sign
           echo "keyAlias=$KEYSTORE_KEY_ALIAS" >> keystore.properties
           echo "storePassword=$KEYSTORE_STORE_PASSWORD" >> keystore.properties
           echo "keyPassword=$KEYSTORE_KEY_PASSWORD" >> keystore.properties
