@@ -48,7 +48,7 @@ android {
                 load(propsFile.reader())
             }
             create("release") {
-                storeFile = file("${rootProject.projectDir}/sign")
+                storeFile = rootProject.file(props.getProperty("storeFile"))
                 storePassword = props.getProperty("storePassword")
                 keyPassword = props.getProperty("keyPassword")
                 keyAlias = props.getProperty("keyAlias")
