@@ -40,7 +40,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "eu.europa.ec.euidi"
+        applicationId = "net.eidas2sandkasse.demolommebok"
         versionName = "1.0.0"
         versionCode = 1
 
@@ -65,7 +65,7 @@ android {
         }
     }
 
-    namespace = "eu.europa.ec.euidi"
+    namespace = "net.eidas2sandkasse.demolommebok"
 }
 
 dependencies {
