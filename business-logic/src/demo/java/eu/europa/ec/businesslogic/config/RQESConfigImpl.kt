@@ -52,8 +52,8 @@ class RQESConfigImpl(val context: Context) : EudiRQESUiConfig {
         get() = DocumentRetrievalConfig.X509Certificates(
             context,
             listOf(
-                R.raw.intermediate_ca2,
-                R.raw.intermediate_brukersted_ca2,
+                R.raw.intermediate_utsteder_ca,
+                R.raw.intermediate_brukersted_ca,
                 R.raw.root_ca
             )
         )
