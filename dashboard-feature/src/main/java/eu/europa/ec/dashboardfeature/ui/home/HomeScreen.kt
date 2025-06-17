@@ -310,7 +310,7 @@ private fun HomeScreenSheetContent(
                 },
                 sheetState = modalBottomSheetState
             ) {
-                /*BottomSheetWithTwoBigIcons(
+                BottomSheetWithTwoBigIcons(
                     textData = BottomSheetTextData(
                         title = stringResource(R.string.home_screen_authenticate),
                         message = stringResource(R.string.home_screen_authenticate_description)
@@ -330,47 +330,50 @@ private fun HomeScreenSheetContent(
                     onEventSent = { event ->
                         onEventSent(event)
                     }
-                )*/
-
-                onEventSent(Event.BottomSheet.Authenticate.OpenAuthenticateOnLine)
-
-            }
-        }
-
-        is HomeScreenBottomSheetContent.Sign -> {
-            WrapModalBottomSheet(
-                onDismissRequest = {
-                    onEventSent(Event.BottomSheet.UpdateBottomSheetState(isOpen = false))
-                },
-                sheetState = modalBottomSheetState
-            ) {
-                BottomSheetWithTwoBigIcons(
-                    textData = BottomSheetTextData(
-                        title = stringResource(R.string.home_screen_sign_document),
-                        message = stringResource(R.string.home_screen_sign_document_description)
-                    ),
-                    options = listOf(
-                        ModalOptionUi(
-                            title = stringResource(R.string.home_screen_sign_document_option_from_device),
-                            leadingIcon = AppIcons.SignDocumentFromDevice,
-                            leadingIconTint = MaterialTheme.colorScheme.primary,
-                            event = Event.BottomSheet.SignDocument.OpenFromDevice,
-                        ),
-                        ModalOptionUi(
-                            title = stringResource(R.string.home_screen_sign_document_option_scan_qr),
-                            leadingIcon = AppIcons.SignDocumentFromQr,
-                            leadingIconTint = MaterialTheme.colorScheme.primary,
-                            event = Event.BottomSheet.SignDocument.OpenScanQR,
-                        )
-                    ),
-                    onEventSent = { event ->
-                        onEventSent(event)
-                    }
                 )
             }
         }
 
+        /**
+         * Bottom sheet for Sign Document click event,
+         * will be implemented in the future
+         *
+        is HomeScreenBottomSheetContent.Sign -> {
+        WrapModalBottomSheet(
+        onDismissRequest = {
+        onEventSent(Event.BottomSheet.UpdateBottomSheetState(isOpen = false))
+        },
+        sheetState = modalBottomSheetState
+        ) {
+        BottomSheetWithTwoBigIcons(
+        textData = BottomSheetTextData(
+        title = stringResource(R.string.home_screen_sign_document),
+        message = stringResource(R.string.home_screen_sign_document_description)
+        ),
+        options = listOf(
+        ModalOptionUi(
+        title = stringResource(R.string.home_screen_sign_document_option_from_device),
+        leadingIcon = AppIcons.SignDocumentFromDevice,
+        leadingIconTint = MaterialTheme.colorScheme.primary,
+        event = Event.BottomSheet.SignDocument.OpenDocumentFromDevice,
+        ),
+        ModalOptionUi(
+        title = stringResource(R.string.home_screen_sign_document_option_scan_qr),
+        leadingIcon = AppIcons.SignDocumentFromQr,
+        leadingIconTint = MaterialTheme.colorScheme.primary,
+        enabled = false,
+        event = Event.BottomSheet.SignDocument.OpenDocumentFromQr,
+        )
+        ),
+        onEventSent = {
+        // invoke event
+        }
+        )
+        }
+        }*/
+
         is HomeScreenBottomSheetContent.LearnMoreAboutAuthenticate -> {
+
             GenericBottomSheet(
                 titleContent = {
                     Row(
