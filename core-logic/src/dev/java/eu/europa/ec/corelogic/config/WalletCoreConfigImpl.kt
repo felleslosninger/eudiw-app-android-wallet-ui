@@ -81,14 +81,7 @@ internal class WalletCoreConfigImpl(
 
                     configureReaderTrustStore(
                         context,
-                        R.raw.pidissuerca02_cz,
-                        R.raw.pidissuerca02_ee,
-                        R.raw.pidissuerca02_eu,
-                        R.raw.pidissuerca02_lu,
-                        R.raw.pidissuerca02_nl,
-                        R.raw.pidissuerca02_pt,
-                        R.raw.pidissuerca02_ut,
-                        R.raw.dc4eu
+                        R.raw.intermediate_brukersted_ca
                     )
                 }
             }
